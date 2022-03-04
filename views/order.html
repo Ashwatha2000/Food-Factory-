@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Product Card</h2>
+<form method="POST" action="/create-order" >
+    <div class="card">
+      <img src="chilli.jpg" alt="Chilli Chicken" style="width:100%">
+      <h1>Chilli Chicken</h1>
+      <p class="price">₹140</p>
+      <p>Spicy, Chinese style.</p>
+      <input type = "hidden" name = "chilli" value = 3 />
+      <p><button  type="submit" value="3">Add to Cart</button></p>
+    </div>
+</form>
+<form method="POST" action="/create-order">
+    <div class="card">
+        <img src="oat.jpg" alt="oat meal" style="width:100%">
+        <h1>Oat meal</h1>
+        <p class="price">₹140</p>
+        <p>Overnight oats.</p>
+        <input type = "hidden" name = "oat" value = 2 />
+        <p><button  type="submit" value="2">Add to Cart</button></p>
+    </div>
+</form>
+<form method="POST" action="/create-order">
+    <div class="card">
+        <img src="apple.jpg" alt="apple juice" style="width:100%">
+        <h1>Apple juice</h1>
+        <p class="price">₹40</p>
+        <p>Fresh apple juice.</p>
+        <input type = "hidden" name = "apple" value = 1 />
+        <p><button  type="submit" value="1">Add to Cart</button></p>
+    </div>
+</form>
+<form method="GET" action="/checkout-cart">
+  <div class="card">
+      <button>Checkout</button>
+  </div>
+</form>
+</body>
+</html>

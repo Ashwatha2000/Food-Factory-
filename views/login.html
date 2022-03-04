@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title> Food Factory App</title>
+</head>
+<body>
+    <centre>
+        <h1>Login</h1>
+        <form method="POST" action="/login-post">
+            <div>
+              <label for="mail"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="mail" required>
+          
+              <label for="pass"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="pass" required>
+          
+              <button type="submit">Login</button>
+              <button type="submit" formaction="/deactivate-user">Deactivate User</button>
+            </div>
+          
+            <div>
+              <button type="button">Cancel</button>
+              <span>Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+    </centre>
+</body>
